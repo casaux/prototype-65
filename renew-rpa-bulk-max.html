@@ -13,12 +13,65 @@
 	  <script type="text/javascript" src="va.js"></script>       <script type="text/javascript">
          /* page specific js */
 
+                  var html="";
+                   for(i=0;i<drones.length;i++){
+                     html+='<tr class="au-table__row">';
+                     html+='<td class="au-table__cell"><a href="#.html">'+drones[i][0]+'</a></td>';
+                     html+='<td class="au-table__cell">'+drones[i][1]+'</td>';
+                     html+='<td class="au-table__cell">'+drones[i][2]+'</td>';
+                     html+='<td class="au-table__cell">$X &nbsp; &nbsp; <a href="#">Remove</a></td>';
+                     html+='</tr>';
+                   }
+
+                   $('document').ready(function(){
+                     $("tbody").append(html);
+
+                     $(".casa-modal").css("display","none");
+
+                     $("td a").bind( "click", function() {
+                        //alert('fo');
+                         $(".casa-modal").css("display","block");
+                     });
+
+                   });
+
+
 
       </script>
    </head>
    <body class="live-demo au-body au-grid">
 
-     
+     <div class="casa-modal">
+       <div class="casa-modal-inner">
+         <div class="casa-modal-header">
+          <h3>Remove drone</h3>
+
+           <div class="casa-modal-close"><a href="renew-rpa-bulk.html"><span>Close</span></a></div>
+
+
+         </div>
+                <div class="casa-modal-body">
+        <p>Are you sure you want to remove your drone?<br><br>
+
+          <strong>Drone</strong><br>
+          DJI Phantom 4 Pro<br><br>
+
+          <strong>Serial No.</strong><br>
+          RLMBX8X9ZYK7U3<br><br>
+
+
+
+                Your drone will not be renewed</p>
+
+                         </div>
+         <div class="casa-modal-footer">
+         <a class="au-btn au-btn--secondary" href="renew-rpa-bulk2.html">Yes</a>	<a class="au-btn" href="#">No</a>
+         </div>
+
+       </div>
+     </div>
+
+
       <main class="au-grid">
          <div class="header">
             <div class="container">
@@ -101,24 +154,7 @@
             <td class="au-table__cell">01/01/2022</td>
             <td class="au-table__cell"><a href="#.html">Manage</a></td>
           </tr>-->
-          <tr class="au-table__row">
-                    <td class="au-table__cell"><a href="#.html">Yuneec Typhoon 4K</a></td>
-            <td class="au-table__cell">SSETL279U7QX2B</td>
-            <td class="au-table__cell">01/10/2021 <span class="badge badge-warning m-b-1">Expiring soon</span></td>
-            <td class="au-table__cell">$X &nbsp; &nbsp; &nbsp; <a href="#">Remove</a></td>
-                </tr>
-            <tr class="au-table__row">
-                    <td class="au-table__cell"><a href="#.html">DJI Phantom 4 Pro</a></td>
-            <td class="au-table__cell">RLMBX8X9ZYK7U3</td>
-            <td class="au-table__cell">01/10/2021 <span class="badge badge-warning m-b-1">Expiring soon</span></td>
-            <td class="au-table__cell">$X &nbsp; &nbsp; &nbsp; <a href="#">Remove</a></td>
-                </tr>
-             <tr class="au-table__row">
-                    <td class="au-table__cell"><a href="#.html">DJI Inspire 2</a></td>
-            <td class="au-table__cell">36XAF6PY63DD9L</td>
-            <td class="au-table__cell">01/10/2021 <span class="badge badge-warning m-b-1">Expiring soon</span></td>
-            <td class="au-table__cell">$X &nbsp; &nbsp; &nbsp; <a href="#">Remove</a></td>
-                </tr>
+
         </tbody>
     </table>
 </div>
