@@ -14,6 +14,10 @@
          /* page specific js */
 
                   var html="";
+                  var kill_rpa;
+                  var rpa_name;
+                  var rpa_serial;
+
                    for(i=0;i<drones.length;i++){
                      html+='<tr class="au-table__row">';
                      html+='<td class="au-table__cell"><a href="#.html">'+drones[i][0]+'</a></td>';
@@ -27,11 +31,67 @@
                      $("tbody").append(html);
 
                      $(".casa-modal").css("display","none");
+                     $(".casa-modal").height($( document ).height());
+                       $(".au-page-alerts").css("display","none");
 
-                     $("td a").bind( "click", function() {
-                        //alert('fo');
+
+
+                     $("td a").bind( "click", function(event) {
+
+                       event.preventDefault();
+
+
+                       $(".casa-modal-inner").css("margin-top",0);
+
+                       var scroll = $(window).scrollTop();
+                        $(".casa-modal-inner").css("margin-top",scroll+100);
+
+
+
+
+                         rpa_name = ($(this).parent().parent().children(':nth-child(1)').text());
+                         rpa_serial = ($(this).parent().parent().children(':nth-child(2)').text());
+
+
+                         kill_rpa = $(this).parent().parent();
+
+                        $("#rpa-name").html(rpa_name);
+                        $("#rpa-serial").html(rpa_serial);
+
+
+
                          $(".casa-modal").css("display","block");
+
                      });
+
+                     $(".casa-modal-close").bind( "click", function() {
+                        //alert('fo');
+                         $(".casa-modal").css("display","none");
+                     });
+
+                     $("#rpa-yes").bind( "click", function() {
+                        //alert('fo');
+                         $(".casa-modal").css("display","none");
+                         $("#alert-name").html(rpa_name);
+                         $("#alert-serial").html(rpa_serial);
+                        kill_rpa.remove();
+
+
+                        $(".au-page-alerts").css("display","block");
+                         //alert
+
+
+
+                     });
+
+                     $("#rpa-no").bind( "click", function(event) {
+                        //alert('fo');
+                         $(".casa-modal").css("display","none");
+                          event.preventDefault();
+                     });
+
+
+
 
                    });
 
@@ -46,7 +106,7 @@
          <div class="casa-modal-header">
           <h3>Remove drone</h3>
 
-           <div class="casa-modal-close"><a href="renew-rpa-bulk.html"><span>Close</span></a></div>
+           <div class="casa-modal-close"><a href="#"><span>Close</span></a></div>
 
 
          </div>
@@ -54,10 +114,10 @@
         <p>Are you sure you want to remove your drone?<br><br>
 
           <strong>Drone</strong><br>
-          DJI Phantom 4 Pro<br><br>
+          <span id="rpa-name">DJI Phantom 4 Pro</span><br><br>
 
           <strong>Serial No.</strong><br>
-          RLMBX8X9ZYK7U3<br><br>
+            <span id="rpa-serial">RLMBX8X9ZYK7U3</span><br><br>
 
 
 
@@ -65,7 +125,7 @@
 
                          </div>
          <div class="casa-modal-footer">
-         <a class="au-btn au-btn--secondary" href="renew-rpa-bulk2.html">Yes</a>	<a class="au-btn" href="#">No</a>
+         <a class="au-btn au-btn--secondary" id="rpa-yes" href="#">Yes</a>	<a class="au-btn" id="rpa-no" href="#">No</a>
          </div>
 
        </div>
@@ -113,6 +173,23 @@
 						 <li>Renew drone registration</li>
                   </ul>
                </nav>
+
+
+               <div role="alert" class="au-page-alerts au-page-alerts--information">
+                                       <div class="row">
+                                          <div class="col-xs-12 col-md-12 col-lg-9">
+                                             <h3>Drone removed from registration renewal</h3>
+
+                                            <p>Your <strong id="alert-name">DJI Phantom 4 Pro</strong> (Serial no: <strong id="alert-serial">RLMBX8X9ZYK7U3</strong>) has been removed from your registration renewal. You can still renew it later from your <a href="#">manage registered drones</a> page.</p>
+
+
+
+
+
+
+                                          </div>
+                                       </div>
+                                    </div>
 
 
 

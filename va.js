@@ -22,7 +22,7 @@ var drones=[
 ["	DJI Phantom 4	","	T3QQYPT2VEE2YU	","	15/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
 ["	DJI Phantom 4	","	NSIN37NRECYUAO	","	15/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
 ["	DJI Phantom 4	","	VRBU5FNKFUQ8UJ	","	15/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
-["	DJI Phantom 4	","	YXMFY6AL9JV7DV	","	15/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+["	DJI Phantom 3	","	YXMFY6AL9JV7DV	","	15/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
 ["	DJI Agras T16	","	J2LAALT43PO3GW	","	30/11/2021	"],
 ["	DJI Phantom 4 Pro	","	D7M80GDDIWHCUJ	","	30/11/2021	"],
 ["	DJI Phantom 4 Pro	","	1HV68PRKMU26ZQ	","	30/11/2021	"],
