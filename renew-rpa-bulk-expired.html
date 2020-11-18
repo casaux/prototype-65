@@ -10,8 +10,35 @@
       <script type="text/javascript" src="../mycasa-src-3.0/js/designsystem.min.js"></script>
       <script type="text/javascript" src="../mycasa-src-3.0/js/jquery.min.js"></script>
       <script type="text/javascript" src="../mycasa-src-3.0/js/jquery.js"></script>
-	  <script type="text/javascript" src="va.js"></script>       <script type="text/javascript">
+	       <script type="text/javascript">
          /* page specific js */
+
+         var drones=[
+           ["	DJI Phantom 4	","	MT3YA8PN9W2J5W	","	01/09/2021 <span class='badge badge-expired m-b-1'>Expired</span>	"],
+         ["	DJI Phantom 4	","	2Y8O1SCZLWMTSF	","	01/09/2021 <span class='badge badge-expired m-b-1'>Expired</span>	"],
+         ["	DJI Phantom 4	","	R247VLDEZ3Z4FD	","	01/09/2021 <span class='badge badge-expired m-b-1'>Expired</span>	"],
+         ["	DJI Phantom 4	","	SJUHQEVL2FI1WW	","	01/09/2021 <span class='badge badge-expired m-b-1'>Expired</span>	"],
+         ["	DJI Phantom 4	","	8QXIHDI9W8GHEW	","	01/09/2021 <span class='badge badge-expired m-b-1'>Expired</span>	"],
+         ["	DJI Phantom 4 Pro	","	ZYZ8NN02NYIRB1	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Phantom 4 Pro	","	ET1KEEY5M26ZHI	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Mavic Air	","	Y7L5RCGPLPA6OK	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Inspire	","	71MYOMD38M3UM5	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Matrice 600 Pro	","	2693KS013OUVBO	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Matrice 600 Pro	","	FZJZP3ONOJ19BI	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Matrice 600 Pro	","	4ERTNMNV5TT1MD	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Mavic Air 2	","	R1S6M164QIZ1TK	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Mavic Air	","	IJ4DS4DZUULHLZ	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Mavic Air	","	XWDIN2LW821ISZ	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Mavic Air	","	UAO1TRL47LVJZK	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	Autel Evo 2 Pro	","	DGNZ5SPH-1	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	XAG P30 Plant Protection Drone	","	2CV3S	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	Sunbirds SB4 Phoenix Solar-Powered Drone	","	9938182	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Phantom 3	","	KLBXK474AKH7JN	","	01/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Phantom 4	","	T3QQYPT2VEE2YU	","	15/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Phantom 4	","	NSIN37NRECYUAO	","	15/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Phantom 4	","	VRBU5FNKFUQ8UJ	","	15/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"],
+         ["	DJI Phantom 3	","	YXMFY6AL9JV7DV	","	15/10/2021 <span class='badge badge-warning m-b-1'>Expiring soon</span>	"]
+       ];
 
                   var html="";
                   var kill_rpa;
